@@ -1,0 +1,43 @@
+<div class="container-fluid p-3 my-3 border" style="background-color: rgb(255, 255, 255); width: 1000px;">
+    <div class="row">
+        <div class="col">
+            <div class="card rounded-0 py-3 shadow-lg">
+                <div class="card-body">
+                    <p>User:</p>
+                    <p>Balance:</p>
+                    <p>Preference:</p>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn-primary" data-bs-toggle="modal" data-bs-target="#ModalForm">Sign in</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-1 ps-5 ms-5">
+            <div class="vertical"></div>
+        </div>
+        <div class="col text-center">
+            <h6 class="fst-italic">Most Popular:</h6>
+            <carousel></carousel>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-4 text-center">
+            <a routerLink="restaurants/evansdale">
+                <img class="pop-out" style="width: 336px;" src="../../../assets/Evansdale.jpg" alt="Evansdale">
+            </a>
+            <button class="btn-primary mt-1" routerLink="restaurants/evansdale">Evansdale</button>
+        </div>
+        <div class="col-4 text-center">
+            <a routerLink="restaurants/mountainlair">
+                <img class="pop-out" style="width: 336px;" src="../../../assets/Mountainlair.jpg" alt="Mountainlair">
+            </a>
+            <button class="btn-primary mt-1" routerLink="restaurants/mountainlair">Mountainlair</button>
+        </div>
+        <div class="col-4 text-center">
+            <a routerLink="restaurants/healthsciences">
+                <img class="pop-out" style="width: 336px;" src="../../../assets/HSC.jpg" alt="HSC">
+            </a>
+            <button class="btn-primary mt-1" routerLink="restaurants/healthsciences">Health Sciences</button>
+        </div>
+    </div>
+</div>

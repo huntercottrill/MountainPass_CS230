@@ -1,0 +1,32 @@
+
+<!-- Modal Form -->
+<div class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <!-- Login Form -->
+          <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+            <div class="modal-header">
+              <h5 class="modal-title">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+  
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Mix Email</span>
+              <input type="text" class="form-control" placeholder="Student0001@mix.wvu.edu" 
+              ngModel name="email"
+              required email>
+            </div>
+  
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Password</span>
+              <input type="password" class="form-control" placeholder="" 
+              ngModel name="password"
+              required password>
+            </div>
+            <div class="modal-footer pt-4">                  
+              <button type="submit" class="btn btn-success mx-auto w-100" style="background-color: rgb(0, 40, 85);" (click)="buttonClicked='Login'">Login</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

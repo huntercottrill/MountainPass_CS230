@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mountainpass-2c2f1": {
+      "hosting": {
+        "mountainPass": [
+          "mountainpass-2c2f1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mountainpass-2c2f1"
+  }
+}

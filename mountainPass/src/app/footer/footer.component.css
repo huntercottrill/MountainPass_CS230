@@ -1,0 +1,61 @@
+a {
+    font-size: 14.5px;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a:active {
+    color: white;
+}
+
+a.dropdown-item {
+    text-decoration: none;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+}
+
+a.dropdown-item:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+a.dropdown-item:active {
+    background-color: black;
+    color: white;
+}
+
+a:hover img {
+    filter: brightness(200%);
+    -webkit-filter: brightness(200%);
+    -moz-filter: brightness(200%);
+    -o-filter: brightness(200%);
+    -ms-filter: brightness(200%);
+}
+
+button {
+    background-color: transparent;
+    color: black;
+}
+
+button:hover {
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+button:focus {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+p.wvu {
+    margin-left: 50px;
+    font-size: small;
+}

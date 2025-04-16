@@ -1,0 +1,23 @@
+<div class="container-fluid px-0">
+    <div class="row py-3" id="header">
+        <div class="col-4">
+            <app-header></app-header>
+        </div>
+    </div>
+    <div class="row ps-5 justify-content-center" style="background-color: rgb(240, 204, 0);">
+        <div class="col-4 ms-5 ps-5">
+            <app-title></app-title>
+        </div>
+    </div>
+    <div class="row justify-content-center bg-dark">
+        <div class="col">
+            <app-nav-bar></app-nav-bar>
+        </div>
+    </div>
+    <div class="row justify-content-center" style="background-image: url(../../assets/topo-2.jpg);">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="row">
+        <app-footer style="background-color: rgb(192, 192, 192);"></app-footer>
+    </div>
+</div>

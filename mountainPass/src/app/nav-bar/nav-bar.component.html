@@ -1,0 +1,90 @@
+<nav class="navbar bg-dark py-2 ms-5">
+    <!--Buttons on the left side of nav bar-->
+    <ul class="nav">
+        <!--Takes the user back to home page by using navigateToHome function on click-->
+        <button
+            class="btn btn-secondary btn-dark border-0 h-100 rounded-0 pe-3 me-3 text-white text-decoration-none" (click)="navigateToHome()">Home
+        </button>
+        <!--Opens the login modal-->
+        <a class="pe-3 ms-3 text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalForm">Sign In</a>
+    </ul>
+    <!--Buttons on the right side of nav bar-->
+    <ul class="nav">
+        <!--Restaurant locations dropdown menu-->
+        <div class="dropdown">
+            <button
+                class="btn btn-secondary dropdown-toggle btn-dark border-0 h-100 rounded-0 pe-3 me-3 text-white text-decoration-none"  type="button"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropDownMenuButton1">
+                Restaurants
+            </button>
+
+            <ul class="w-25 dropdown-menu dropdown-menu-end dropdown-menu-dark rounded-0 text-center" aria-labelledby="dropDownMenuButton1">
+                <li>
+                    <h4 class="text-white">Locations</h4>
+                </li>
+                <li>
+                    <hr>
+                </li>
+                <!--Links to the Evansdale restaurants page-->
+                <li class="dropdown-item pop-out pb-2">
+                    <a class="link text-decoration-none" routerLink="restaurants/evansdale">Evansdale</a>
+                </li>
+                <!--Links to the Mountainlair restaurants page-->
+                <li class="dropdown-item pop-out my-2">
+                    <a class="link text-decoration-none" routerLink="restaurants/mountainlair">Mountainlair</a>
+                </li>
+                <!--Links to the HSC restaurants page-->
+                <li class="dropdown-item pop-out pt-2">
+                    <a class="link text-decoration-none mb-5" routerLink="restaurants/healthsciences">Health Sciences</a>
+                </li>
+            </ul>
+        </div>
+        <!--User information dropdown menu-->
+        <div class="dropdown">
+            <button
+                class="btn btn-secondary dropdown-toggle btn-dark border-0 h-100 rounded-0 pe-3 me-3 text-white text-decoration-none"  type="button"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropDownMenuButton1">
+                User
+            </button>
+            <!--Displays user-info component: name, balance, ID-->
+            <ul class="w-25 dropdown-menu dropdown-menu-end dropdown-menu-dark rounded-0" aria-labelledby="dropDownMenuButton1">
+                <li>
+                    <user-info></user-info>
+                </li>
+            </ul>
+        </div>
+    </ul>
+</nav>
+
+
+<!-- Modal Form -->
+<div class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <!-- Login Form -->
+          <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+            <div class="modal-header">
+              <h5 class="modal-title">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+  
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Mix Email</span>
+              <input type="text" class="form-control" placeholder="Student0001@mix.wvu.edu" 
+              ngModel name="email"
+              required email>
+            </div>
+  
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Password</span>
+              <input type="password" class="form-control" placeholder="" 
+              ngModel name="password"
+              required password>
+            </div>
+            <div class="modal-footer pt-4">                  
+              <button type="submit" class="btn btn-success mx-auto w-100" style="background-color: rgb(0, 40, 85);" (click)="buttonClicked='Login'">Login</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,47 @@
+<div class="container">
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#MenuCollapse"
+            aria-expanded="false" aria-controls="MenuCollapse" style="background-color: rgb(0, 40, 85);">
+            Chick-fil-A
+        </button>
+    </p>
+    <div class="collapse" id="MenuCollapse">
+        <div class="card rounded-0 mx-5 mb-3 shadow-lg">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <p>Food</p>
+                    </div>
+                    <div class="col">
+                        <p>Price</p>
+                    </div>
+                    
+                </div>
+
+                <div *ngFor="let order of orders">
+                    <div class="row" style="margin: 10px">
+                        <div class="col">
+                            <p>{{order.Food}}</p>
+                        </div>
+                        <div class="col">
+                            <p>${{order.Price}}</p>
+                        </div>
+                        <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="intput-group-text">
+                                        QTY:
+                                    </div>
+                                </div>
+                                <input type="number" min = "0" max = "99" class="form-control" id="inlineFormInputGroup" placeholder="QTY">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button type class="btn-primary" style="background-color: rgb(234, 170, 0);">Add +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

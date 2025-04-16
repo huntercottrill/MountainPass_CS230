@@ -1,0 +1,51 @@
+<div id="top-bar" class="bg-dark">
+    <p class="text-white text-center fs-1 fst-italic" id="name">Evansdale:</p>
+</div>
+<div class="container-fluid">
+  <div class="d-flex flex-row">
+    <div *ngFor="let restaurant of restaurants;">
+        <ED-Cards Name={{restaurant.Name}} Description={{restaurant.Description}} imagePath={{restaurant.imagePath}}>
+            failed to load cards...
+        </ED-Cards>
+    </div>
+  </div>
+</div>
+<div class="bg-dark">
+    <div class="d-flex justify-content-end me-2">
+        <button type="button" class="btn btn-primary mb-1 mt-1" data-bs-toggle="modal" data-bs-target="#AddRestModal">Add Location</button>
+    </div>
+</div>
+
+
+<!-- Modal Form -->
+<div class="modal fade" id="AddRestModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <!-- Login Form -->
+          <form #DataForm="ngForm">
+            <div class="modal-header">
+              <h5 class="modal-title">Add Restaurant Data</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+  
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Name</span>
+              <input type="text" class="form-control" placeholder="Student0001@mix.wvu.edu" 
+              ngModel name="email"
+              required email>
+            </div>
+  
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Description</span>
+              <input type="password" class="form-control" placeholder="" 
+              ngModel name="password"
+              required password>
+            </div>
+
+            <div class="modal-footer pt-4">    
+                <button type="submit" class="btn btn-success mx-auto w-100" style="background-color: rgb(0, 40, 85);" (click)="buttonClicked='Create Rest'">Login</button>             
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
